@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.6e7bb616.css",
+    "main.js": "/portfolio/static/js/main.99ef3e8e.js",
+    "static/js/787.35fe7324.chunk.js": "/portfolio/static/js/787.35fe7324.chunk.js",
+    "static/media/atishay1.jpg": "/portfolio/static/media/atishay1.1bff33909bb6c136917a.jpg",
+    "static/media/atishay.jpg": "/portfolio/static/media/atishay.2b8e291076d05d3d0146.jpg",
+    "index.html": "/portfolio/index.html",
+    "main.6e7bb616.css.map": "/portfolio/static/css/main.6e7bb616.css.map",
+    "main.99ef3e8e.js.map": "/portfolio/static/js/main.99ef3e8e.js.map",
+    "787.35fe7324.chunk.js.map": "/portfolio/static/js/787.35fe7324.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e7bb616.css",
+    "static/js/main.99ef3e8e.js"
+  ]
+}
