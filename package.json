@@ -2,7 +2,7 @@
   "name": "newportfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://atishay09.github.io",
+  "homepage": "https://atishay09.github.io/myportfolio",
   "dependencies": {
     "-": "^0.0.1",
     "@emailjs/browser": "^3.4.0",
