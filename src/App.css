@@ -10,6 +10,7 @@
   --white-alpha-40: rgba(255, 255, 255, 0.4);
   --white-alpha-25: rgba(255, 255, 255, 0.25);
   --backdrop-filter-blur: blur(5px);
+
 }
 
 * {
@@ -17,6 +18,7 @@
   margin: 0;
   padding: 0;
   outline: none;
+  font-family: emoji;
 }
 
 ::before,
@@ -32,11 +34,9 @@ body {
     var(--cyan-light)
   );
 
-
   /* background-image: linear-gradient(
     to bottom right,black,rgb(13, 13, 53)
   );*/
-
 
   font-size: 16px;
   color: var(--dark-blue);
@@ -46,6 +46,7 @@ body {
   padding: 35px 15px;
   font-weight: 300;
   background-attachment: fixed;
+  font-family: 'Segoe UI';
 }
 
 body.hide-scrolling {
@@ -64,6 +65,14 @@ body::before {
   opacity: 0.12;
 }
 
+.text-justify{
+  text-align: justify;
+}
+
+.mb-3{
+  margin-bottom: 30px;
+}
+
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -71,6 +80,10 @@ img {
 
 ul {
   list-style: none;
+}
+
+ul.list-forced{
+  list-style:circle;
 }
 
 section {
@@ -151,7 +164,7 @@ h6 {
 }
 
 .home-section {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .home-section.active {
@@ -293,10 +306,10 @@ button {
   padding: 0 15px;
 }
 .about-text .about-me {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   margin-bottom: 10px;
-  font-size: 24px;
-  text-align: center;
+  font-size: 18px;
+  text-align: justify;
   font-weight: 400;
 }
 
@@ -321,6 +334,7 @@ button {
 .about-text .skills {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .about-text .skill-item {
@@ -485,7 +499,7 @@ button {
   padding-bottom: 50px;
 }
 
-button.btn.view-project-btn{
+button.btn.view-project-btn {
   margin: auto;
   display: flex;
 }
@@ -585,6 +599,14 @@ button.btn.view-project-btn{
   margin-bottom: 30px;
 }
 
+.contact-form .input-group.mb-0 {
+  margin-bottom: 0px;
+}
+
+.email-response{
+  width: 100%;
+  margin: 10px !important;
+}
 .contact-form .input-control {
   display: block;
   width: 100%;
@@ -637,7 +659,7 @@ textarea#message {
   border-radius: 50%;
   margin: 6px 10px 0 0;
   border: 1px solid var(--white-alpha-40);
-  transition: all .8s ease;
+  transition: all 0.8s ease;
 }
 
 .contact-info-item .social-links a:hover {
@@ -661,7 +683,7 @@ textarea#message {
   z-index: 1;
 }
 
-.header .nav-toggler{
+.header .nav-toggler {
   width: 50px;
   height: 50px;
   border: none;
@@ -675,7 +697,7 @@ textarea#message {
   z-index: 1;
 }
 
-.header .btn-home{
+.header .btn-home {
   width: 50px;
   height: 50px;
   border: none;
@@ -692,12 +714,12 @@ textarea#message {
   left: 0;
 }
 
-.header .btn-home span{
+.header .btn-home span {
   color: var(--main-color);
   transition: all 0.5s ease;
 }
 
-.header .btn-home:hover span{
+.header .btn-home:hover span {
   transform: scale(1.2);
 }
 
@@ -834,7 +856,7 @@ textarea#message {
 
 /*background circles */
 
-.bg-circles{
+.bg-circles {
   position: fixed;
   top: 0;
   height: 100%;
@@ -845,74 +867,77 @@ textarea#message {
 }
 
 @keyframes zoomInOut {
-  0%,100%{
+  0%,
+  100% {
     transform: scale(0.8);
   }
-  50%{
+  50% {
     transform: scale(1);
   }
 }
 
 @keyframes bounceTop {
-  0%,100%{
+  0%,
+  100% {
     transform: translateY(-50px);
   }
-  50%{
+  50% {
     transform: translateY(0px);
   }
 }
 
 @keyframes bounceLeft {
-  0%,100%{
+  0%,
+  100% {
     transform: translateX(50px);
   }
-  50%{
+  50% {
     transform: translateX(0px);
   }
 }
 
-.bg-circles div{
+.bg-circles div {
   position: absolute;
   border-radius: 50%;
 }
 
-.bg-circles .circle-1{
+.bg-circles .circle-1 {
   height: 60px;
   width: 60px;
   background-color: var(--cyan-light);
   top: 10%;
   left: 5%;
   animation: zoomInOut 5s linear infinite;
-  opacity: .5;
+  opacity: 0.5;
 }
-.bg-circles .circle-5{
+.bg-circles .circle-5 {
   height: 60px;
   width: 60px;
   background-color: var(--blue);
   top: 80%;
   left: 20%;
   animation: zoomInOut 5s linear infinite;
-  opacity: .5;
+  opacity: 0.5;
 }
-.bg-circles .circle-6{
+.bg-circles .circle-6 {
   height: 60px;
   width: 60px;
   background-color: var(--orange);
   top: 20%;
   left: 50%;
   animation: bounceLeft 5s ease-in-out infinite;
-  opacity: .5;
+  opacity: 0.5;
 }
-.bg-circles .circle-7{
+.bg-circles .circle-7 {
   height: 80px;
   width: 80px;
   background-color: var(--dark-blue);
   top: 85%;
   left: 75%;
   animation: bounceTop 5s ease-in-out infinite;
-  opacity: .5;
+  opacity: 0.5;
 }
-.bg-circles .circle-8{
+.bg-circles .circle-8 {
   height: 60px;
   width: 60px;
   background-color: var(--pink-light);
@@ -922,17 +947,17 @@ textarea#message {
   opacity: 1;
 }
 
-.bg-circles .circle-2{
+.bg-circles .circle-2 {
   height: 80px;
   width: 80px;
   background-color: var(--main-color);
   left: 40%;
   top: 50%;
   animation: bounceTop 5s ease-in-out infinite;
-  opacity: .5;
+  opacity: 0.5;
 }
 
-.bg-circles .circle-3{
+.bg-circles .circle-3 {
   height: 90px;
   width: 90px;
   background-color: var(--white);
@@ -941,94 +966,94 @@ textarea#message {
   opacity: 0.5;
 }
 
-.bg-circles .circle-4{
+.bg-circles .circle-4 {
   height: 50px;
   width: 50px;
   background-color: var(--green-yellow);
   left: -30px;
   top: 80%;
   opacity: 0.5;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 /*responsive*/
-@media (max-width:991px){
-  .portfolio-item{
+@media (max-width: 991px) {
+  .portfolio-item {
     width: calc(50% - 30px);
   }
 }
 
-@media (max-width:767px){
-  .portfolio-item{
+@media (max-width: 767px) {
+  .portfolio-item {
     width: calc(100% - 30px);
   }
   .contact-form,
   .contact-info,
   .home-text,
-  .home-img{
+  .home-img {
     width: 100%;
   }
 
-  .contact-info{
+  .contact-info {
     order: -1;
     margin-bottom: 15px;
   }
-  .home-img{
+  .home-img {
     order: -1;
   }
-  .home-text{
+  .home-text {
     text-align: center;
   }
-  .home-img .img-box{
+  .home-img .img-box {
     max-width: 300px;
   }
-  .home-text .btn{
-    margin: 0 7px 15px;;
+  .home-text .btn {
+    margin: 0 7px 15px;
   }
 
   .about-text,
-  .about-img{
+  .about-img {
     width: 100%;
   }
-  .about-text{
+  .about-text {
     text-align: justify;
     margin-top: 20px;
   }
 }
 
-@media (max-width:575px){
+@media (max-width: 575px) {
   .contact-form,
-  .contact-info{
+  .contact-info {
     padding: 0;
   }
-  .home-text h1{
+  .home-text h1 {
     font-size: 30px;
   }
-  .home-text h2{
+  .home-text h2 {
     font-size: 16px;
   }
-  .header .nav-inner ul li a{
+  .header .nav-inner ul li a {
     font-size: 30px;
   }
-  .btn{
+  .btn {
     font-size: 14px;
   }
 }
 
-@media (max-width:400px){
-  .timeline-item h4{
+@media (max-width: 400px) {
+  .timeline-item h4 {
     font-size: 14px !important;
   }
-  .timeline-item p{
+  .timeline-item p {
     font-size: 13px !important;
   }
-  .container{
+  .container {
     padding: 0;
   }
-  .container1{
+  .container1 {
     padding: 0 40px;
   }
-  .container2{
+  .container2 {
     padding: 0 20px;
   }
 }

@@ -1,25 +1,26 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
   const form = useRef();
+  const [emailSent, setEmailSent] = useState(0);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+
     emailjs.sendForm('service_wf0wd3h', 'template_2gx0ufz', form.current, 'user_jGfLUM6h12UuWdLiyz1Gp')
       .then((result) => {
-          console.log(result.text);
+        console.log(result.text);
+        setEmailSent(1);
+        e.target.reset();
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
+        setEmailSent(2);
       });
-      e.target.reset();
   };
 
-  function formSubmit(){
-    
-  }
 
 
   return (
@@ -61,7 +62,7 @@ const Contact = () => {
                     name="subject"
                   />
                 </div>
-                <div className="input-group">
+                <div className="input-group mb-0">
                   <textarea
                     placeholder="Messasge"
                     className="input-control"
@@ -70,8 +71,15 @@ const Contact = () => {
                     name="message"
                   ></textarea>
                 </div>
+                <div className="email-response">
+                  {
+                    emailSent === 1? <>
+                      <p style={{color:"green"}}>✅ Email Sent Successfully</p>
+                    </> : emailSent === 2 ? <p style={{color:"red"}}>❌ Email Not Sent</p> : <></>
+                  }
+                </div>
                 <div className="submit-btn">
-                  <button type="submit" className="btn" onClick={formSubmit}>
+                  <button type="submit" className="btn" >
                     send message
                   </button>
                 </div>
